@@ -1,0 +1,136 @@
+03-24-18 class notes
+
+Nested class
+
+enum
+
+Singleton class
+
+Super in Constructor
+Super in Variable
+Super in method
+
+Truth table
+
+Bits         OR.      And
+f.   f.          F          f
+
+F.   T        t.           F
+T.    F       t            f
+T.    T       t            t
+
+Loops:
+
+For loop
+While loop
+Do…while loop
+For each loop.  ToDo
+
+
+For loop Structure:
+
+for(initialize block; conditional block; incremental/decremental block)
+{
+
+
+
+}
+
+While loop:
+
+Initialize
+while(conditional block)
+{
+
+}
+
+D0…While:
+
+Do{
+
+   //do something
+
+}while(conditional block);
+
+While vs do…while loop
+
+Exception
+
+Try{
+
+}catch(Exception ex){
+
+
+}
+
+File operation:
+FileReader
+BuferedReader
+
+Try{
+
+}catch(Exception ex){
+
+
+} finally{
+
+
+
+}
+http://chortle.ccsu.edu/java5/Notes/chap84/ch84_3.html
+
+What is final, finally and finalize?
+
+………………………………………………………..
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public static void main(String[] args) {
+
+    FileReader fr = null;
+    BufferedReader br = null;
+    try {
+        fr = new FileReader("/Users/peoplentech/develop/SeleniumMarch2018/file1");
+    }catch(Exception ex){
+        System.out.println("file is not located in given path");
+    }
+    try {
+        if(fr != null) {
+            br = new BufferedReader(fr);
+            String st = "";
+            while ((st = br.readLine()) != null) {
+                System.out.println(st);
+            }
+        }
+    }catch (Exception ex){
+        ex.printStackTrace();
+    }finally{
+        if(fr != null){
+            try {
+                fr.close();
+            }catch(Exception ex){
+                ex.printStackTrace();
+            }
+        }
+        if(br != null){
+            try {
+                br.close();
+            }catch(Exception ex){
+                ex.printStackTrace();
+            }
+        }
+    }
+
+}
+…………………………………………………..
+Databases:
+
+MySql       https://www.mysql.com/
+MongoDB https://www.mongodb.com/download-center#enterprise
+
+Learn Sql Queries: https://www.w3schools.com/sql/
+
+
+
+
